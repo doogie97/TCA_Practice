@@ -9,13 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                Section {
+                    NavigationLink(destination: YourFirstFeatureView(
+                        store: TCA_PracticeApp.counterStore
+                    )) {
+                        Text("Your first feature")
+                    }
+                } header: {
+                    Text("TCA_Tutorial")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+            }
+            .navigationTitle("TCA_Practice")
         }
-        .padding()
     }
 }
 
