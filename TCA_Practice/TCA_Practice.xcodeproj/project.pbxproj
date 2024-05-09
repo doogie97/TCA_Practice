@@ -15,6 +15,7 @@
 		71ACF9A72BECCC0000AF7E0A /* TCA_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACF9A62BECCC0000AF7E0A /* TCA_PracticeUITests.swift */; };
 		71ACF9A92BECCC0000AF7E0A /* TCA_PracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ACF9A82BECCC0000AF7E0A /* TCA_PracticeUITestsLaunchTests.swift */; };
 		71ACF9B72BECCD8C00AF7E0A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 71ACF9B62BECCD8C00AF7E0A /* ComposableArchitecture */; };
+		C6F491FF2BED0BC5007458BF /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F491FE2BED0BC5007458BF /* CounterFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		71ACF9A22BECCC0000AF7E0A /* TCA_PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCA_PracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71ACF9A62BECCC0000AF7E0A /* TCA_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PracticeUITests.swift; sourceTree = "<group>"; };
 		71ACF9A82BECCC0000AF7E0A /* TCA_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C6F491FE2BED0BC5007458BF /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		C6F491FB2BED0A30007458BF /* YourFirstFeature */ = {
 			isa = PBXGroup;
 			children = (
+				C6F491FE2BED0BC5007458BF /* CounterFeature.swift */,
 			);
 			path = YourFirstFeature;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F491FF2BED0BC5007458BF /* CounterFeature.swift in Sources */,
 				71ACF98E2BECCBFF00AF7E0A /* ContentView.swift in Sources */,
 				71ACF98C2BECCBFF00AF7E0A /* TCA_PracticeApp.swift in Sources */,
 			);
