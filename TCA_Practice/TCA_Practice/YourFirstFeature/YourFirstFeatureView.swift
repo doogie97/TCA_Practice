@@ -10,24 +10,28 @@ import ComposableArchitecture
 
 struct YourFirstFeatureView: View {
     let store: StoreOf<CounterFeature>
+    @ObservedObject var viewStore: ViewStoreOf<CounterFeature>
+    
+    init(store: StoreOf<CounterFeature>) {
+        self.store = store
+        self.viewStore = ViewStore(store, observe: { $0 })
+    }
     
     var body: some View {
-        WithViewStore(self.store, observe: { $0 }) { viewStore in
-            VStack {
-                Text("\(viewStore.count)")
-                    .padding()
-                    .font(.largeTitle)
-                    .frame(minWidth: 50)
-                    .background(.black.opacity(0.1))
-                    .cornerRadius(10)
-                
-                HStack {
-                    counterButton(text: "-") {
-                        viewStore.send(.decrementButtonTapped)
-                    }
-                    counterButton(text: "+") {
-                        viewStore.send(.incrementButtonTapped)
-                    }
+        VStack {
+            Text("\(viewStore.count)")
+                .padding()
+                .font(.largeTitle)
+                .frame(minWidth: 50)
+                .background(.black.opacity(0.1))
+                .cornerRadius(10)
+            
+            HStack {
+                counterButton(text: "-") {
+                    viewStore.send(.decrementButtonTapped)
+                }
+                counterButton(text: "+") {
+                    viewStore.send(.incrementButtonTapped)
                 }
             }
         }
