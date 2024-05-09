@@ -7,14 +7,12 @@
 
 import ComposableArchitecture
 
-@Reducer
-struct CounterFeature {
-    @ObservableState
-    struct State {
+struct CounterFeature: Reducer {
+    struct State: Equatable {
         var count = 0
     }
     
-    enum Action {
+    enum Action: Equatable {
         case decrementButtonTapped
         case incrementButtonTapped
     }

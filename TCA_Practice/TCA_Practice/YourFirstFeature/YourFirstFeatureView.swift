@@ -12,20 +12,22 @@ struct YourFirstFeatureView: View {
     let store: StoreOf<CounterFeature>
     
     var body: some View {
-        VStack {
-            Text("\(store.count)")
-                .padding()
-                .font(.largeTitle)
-                .frame(minWidth: 50)
-                .background(.black.opacity(0.1))
-                .cornerRadius(10)
-            
-            HStack {
-                counterButton(text: "-") {
-                    store.send(.decrementButtonTapped)
-                }
-                counterButton(text: "+") {
-                    store.send(.incrementButtonTapped)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            VStack {
+                Text("\(viewStore.count)")
+                    .padding()
+                    .font(.largeTitle)
+                    .frame(minWidth: 50)
+                    .background(.black.opacity(0.1))
+                    .cornerRadius(10)
+                
+                HStack {
+                    counterButton(text: "-") {
+                        viewStore.send(.decrementButtonTapped)
+                    }
+                    counterButton(text: "+") {
+                        viewStore.send(.incrementButtonTapped)
+                    }
                 }
             }
         }
