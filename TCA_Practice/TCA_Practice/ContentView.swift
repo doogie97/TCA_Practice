@@ -12,9 +12,11 @@ struct ContentView: View {
         NavigationView {
             List {
                 Section {
-//                    NavigationLink(destination: YourFirstFeatureView()) {
-//                        Text("Your first feature")
-//                    }
+                    NavigationLink(destination: YourFirstFeatureView(
+                        store: TCA_PracticeApp.counterStore
+                    )) {
+                        Text("Your first feature")
+                    }
                 } header: {
                     Text("TCA_Tutorial")
                         .font(.title3)
